@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myportfolio</title>
+  <!-- webフォント -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Noto+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- fontawesome -->
+  <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
+  <!-- リセットcss -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <nav class="g-nav">
+      <ul class="nav">
+        <li class="nav__menu"><a href="#top" class="nav__link">Top</a></li>
+        <li class="nav__menu"><a href="#works" class="nav__link">Works</a></li>
+        <li class="nav__menu"><a href="#about" class="nav__link">About</a></li>
+        <li class="nav__menu"><a href="#skill" class="nav__link">Skill</a></li>
+        <li class="nav__menu"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- ヘッダーend -->
+
+  <!-- メインセクション -->
+  <main>
+    <!-- メインビジュアル&タイトル -->
+    <section class="top" id="top">
+      <div class="top-wrapper">
+        <h1 class="top-wrapper__title">Satoshi Goto</h1>
+        <p class="top-wrapper__subTitle">My portfolio</p>
+      </div>
+    </section>
+    <!-- メインビジュアル&タイトルend -->
+
+
+    <!-- works -->
+    <section class="works section" id="works">
+      <h2 class="works-title mainTitle">Works</h2>
+      <p class="works-subtitle subTitle">
+        これまでに私が行ってきたサイト模写です。</p>
+      <p class="works-subtitle__annotation">画像をスクロールすると全体をご覧いただけます。<br>
+        画像をクリックするとリンク先でソースコードもご確認頂けます。</p>
+      <div class="works-container">
+        <figure class="card card1">
+          <figcaption class="card__description">
+            XDデザインカンプからの<br class="tab-only">コーディング<br>
+            <a href="https://crestadesign.org/" target="_blank" class="card__description-link">提供元：クリ★スタ様</a>
+          </figcaption>
+          <div class="card__imgArea img1">
+            <a href="https://goto-satoshi0112.github.io/cresta/" target="_blank" class="card__imgArea-link">
+              <img src="works/works1.png" style="width: 100%; height: auto;" alt="click me" class="card__imgArea-img">
+            </a>
+          </div>
+        </figure>
+        <figure class="card card2">
+          <figcaption class="card__description">
+            XDデザインカンプからの<br class="tab-only">コーディング<br>
+            <a href="https://crestadesign.org/" target="_blank" class="card__description-link">提供元：クリ★スタ様</a>
+          </figcaption>
+          <div class="card__imgArea img2">
+            <a href="https://goto-satoshi0112.github.io/cresta_second/" target="_blank" class="card__imgArea-link">
+              <img src="works/works2.png" style="width: 100%; height: auto;" alt="" class="card__imgArea-img">
+            </a>
+          </div>
+        </figure>
+        <figure class="card card3">
+          <figcaption class="card__description">
+            既存サイトの<br class="tab-only">模写コーディング<br>
+            <a href="https://isara.life/" target="_blank" class="card__description-link">元サイト：isara.life様</a>
+          </figcaption>
+          <div class="card__imgArea img3">
+            <a href="#" class="card__imgArea-link">
+              <img src="works/works3.png" style="width: 100%; height: auto;" alt="" class="card__imgArea-img">
+            </a>
+          </div>
+        </figure>
+        <figure class="card card4">
+          <figcaption class="card__description">
+            デザインカンプからの<br class="tab-only">
+            模写コーディング<br>
+            <a href="#" class="card__description-link">参照元サイト</a>
+          </figcaption>
+          <div class="card__imgArea img4">
+            <a href="https://goto-satoshi0112.github.io/roy/" target="_blank" class="card__imgArea-link">
+              <img src="works/works4.png" style="width: 100%; height: auto;" alt="" class="card__imgArea-img">
+            </a>
+          </div>
+        </figure>
+        <figure class="card card5">
+          <figcaption class="card__description">
+            既存サイトの<br class="tab-only">
+            模写コーディング<br>
+            <a href="http://demo.themegraphy.com/write-ja/" target="_blank" class="card__description-link">元サイト：write様</a>
+          </figcaption>
+          <div class="card__imgArea img5">
+            <a href="#" class="card__imgArea-link">
+              <img src="works/works5.png" style="width: 100%; height: auto;" alt="" class="card__imgArea-img">
+            </a>
+          </div>
+        </figure>
+      </div>
+    </section>
+    <!-- works end -->
+
+    <!-- about -->
+    <section class="about section" id="about">
+      <!-- タイトル -->
+      <h2 class="about-title mainTitle">about</h2>
+      <!-- エリア -->
+      <div class="info">
+        <div class="info__avatar"></div>
+        <div class="info__description">
+          <p class="info__description-text name">
+            後藤 智（ごとう さとし）
+          </p>
+          <p class="info__description-text birth">1976年 兵庫県出身 岐阜県在住</p>
+          <hr>
+          <p class="info__description-text introduction intro1">
+            「お客様の抱える課題を解決する」ことを念頭に、<br class="sp-only">
+            webエンジニアとして活動させていただいております。</p>
+          <ul class="info__description-list">
+            <li class="info__description-menu menu1">円滑なコミュニケーション<br>
+              （営業職を15年経験してきました）</li>
+            <li class="info__description-menu menu2">柔軟な提案</li>
+            <li class="info__description-menu menu3">迅速な対応</li>
+          </ul>
+          <p class="info__description-text introduction intro2">をモットーとしております。</p>
+          <hr>
+          <div class="info__description-icon">
+            <a href="https://twitter.com/gtst0112" target="_blank"><i class="fab fa-twitter infoIcon"></i></a>
+            <a href="mailto:goto.satoshi012@gmail.com" target="_blank"><i
+                class="far fa-envelope-open infoIcon"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end -->
+
+    <!-- skill -->
+    <section class="skill section" id="skill">
+      <!-- タイトル -->
+      <h2 class="skill-title mainTitle">skill</h2>
+      <p class="skill-subtitle subTitle">下記のスキルに留まらず、<br>新たなスキルを身に付けられるよう<br>日々学習を継続しております。</p>
+      <div class="skill-container">
+        <div class="skill-container__img img1"></div>
+        <div class="skill-container__img img2"></div>
+        <div class="skill-container__img img3"></div>
+        <div class="skill-container__img img4"></div>
+        <div class="skill-container__img img5"></div>
+        <div class="skill-container__img img6"></div>
+      </div>
+    </section>
+    <!-- skill end -->
+
+    <!-- contact -->
+    <section class="contact section" id="contact">
+      <!-- タイトル -->
+      <h2 class="contact-title mainTitle">contact</h2>
+      <p class="contact-subtitle subTitle">お問い合わせはTwitterのDM<br>またはメールにて受け付けております。<br>お仕事のご依頼、ご相談お待ちしております。</p>
+      <div class="contact-area__icon">
+        <a href="https://twitter.com/gtst0112" target="_blank"><i class="fab fa-twitter contactIcon"></i></a>
+        <a href="mailto:goto.satoshi012@gmail.com" target="_blank"><i class="far fa-envelope-open contactIcon"></i></a>
+      </div>
+      <address class="gmail">goto.satoshi012@gmail.com</address>
+    </section>
+    <!-- contact end -->
+  </main>
+  <!-- main end -->
+
+  <!-- footer -->
+  <footer class="footer">
+    Copyright@ Satoshi Goto all rights reserved.
+  </footer>
+  <!-- footer end -->
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

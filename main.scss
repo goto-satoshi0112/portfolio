@@ -1,0 +1,460 @@
+@import "variable";
+
+// 共通
+html {
+  font-size: $small;
+}
+
+body {
+  font-family: 'Montserrat', 'Noto Sans', sans-serif;
+}
+
+hr {
+  width: 100%;
+}
+
+.mainTitle {
+  @include mainTitle;
+}
+
+.subTitle {
+  @include subTitle;
+}
+
+.section {
+  @include section;
+}
+
+.tab-only {
+  display: none;
+}
+
+.sp-only {
+  display: none;
+}
+// 共通ここまで
+
+// ヘッダー
+.header {
+  width: 80px;
+  padding: 10px 0;
+  top: 40px;
+  right: 2%;
+  position: fixed;
+  z-index: 99;
+}
+.nav {
+  list-style: none;
+  &__menu {
+    margin: 30px 0;
+    padding: 10px 0px;
+    background-color: $g_color;
+    border-radius: 12px 0 12px 0;
+    text-align: center;
+    &:hover {
+      background-color: rgba(255, 200, 0, .8);
+      box-shadow: 2px 2px  rgba(255, 200, 0, .3);
+      transition: .4s;
+      cursor: pointer;
+    }
+    &:hover > a {
+      color: $w_color;
+    }
+  }
+  &__link {
+    font-size: $little-small;
+    text-decoration: none;
+    color: $b_color;
+  }
+}
+// ヘッダーここまで
+
+// ヘッダー/スクロールカラーチェンジ
+.headerColor-default {
+  color: $w_color;
+  background-color: rgba(255, 200, 0, .8);
+  &:hover {
+    color: $w_color;
+    background-color: $b_color;
+  }
+}
+// ヘッダー/スクロールカラーチェンジここまで
+
+// タイトル・キービジュアル
+.top {
+  background-image: url(img/fv.jpg); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  &-wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: $main_color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__title {
+      font-size: $ex-big;
+      font-style: italic;
+      letter-spacing: 2.4px;
+      color: $w_color;
+      margin-bottom: 10px;
+      text-shadow: 
+      2px 2px 10px $bk_rightcolor,
+      -2px 2px 10px  $bk_rightcolor,
+      2px -2px 10px  $bk_rightcolor,
+      -2px -2px 10px  $bk_rightcolor;
+    }
+    &__subTitle {
+      font-size: $medium-large;
+      color: $w_color;
+      text-shadow: 
+      2px 2px 10px $bk_rightcolor,
+      -2px 2px 10px  $bk_rightcolor,
+      2px -2px 10px  $bk_rightcolor,
+      -2px -2px 10px  $bk_rightcolor;
+    }
+  }
+}
+// タイトル・キービジュアルここまで
+
+// -- works --
+.works {
+  &-subtitle {
+    margin-bottom: 5px;
+    &__annotation {
+      font-size: $little-small;
+      text-align: center;
+      margin-bottom: 60px;
+      line-height: 1.4;
+    }
+  }
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.card {
+  @include card(30%);
+  &__description {
+    @include card-text;
+   &-link {
+     font-size: $little-small;
+   }
+  }
+}
+.card.card1 {
+  @include card(65%);
+}
+.card__imgArea {
+  @include card-img;
+  &-link {
+    text-decoration: none;
+  }
+  // &-img {
+  //   box-sizing: border-box;
+  // }
+}
+// works end
+
+// -- about --
+.about {
+  background: $main_color;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  background-color: $w_color;
+  &__avatar {
+    width: 280px;
+    height: 280px;
+    margin-left: calc((50% - 280px) / 2);
+    border-radius: 50%;
+    background: url(img/about.jpg) no-repeat center / cover;
+  }
+  &__description {
+    width: calc(50% - 2% * 2);
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    &-text {
+      @include text;
+    }
+    &-list {
+      list-style: inside;
+    }
+    &-menu {
+      font-size: $reguler;
+      margin-bottom: 10px;
+      letter-spacing: 1.6px;
+      &-menu:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.infoIcon {
+  @include icon(2.6rem);
+  &:first-of-type {
+    margin-right: 20px;
+  }
+}
+// about end
+
+// -- skill --
+.skill {
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 180px;
+    &__img {
+      width: 20%;
+      height: 120px;
+      margin: 20px 5%;
+      background: no-repeat center / contain;
+    }
+    &__img.img1 {
+      background-image: url(skill/html_icon.png) ;
+    }
+    &__img.img2 {
+      background-image: url(skill/css_icon.png);
+    }
+    &__img.img3 {
+      background-image: url(skill/jquery_icon.png);
+    }
+    &__img.img4 {
+      background-image: url(skill/sass_icon.png);
+    }
+    &__img.img5 {
+      background-image: url(skill/adobe_xd_icon.png);
+    }
+    &__img.img6 {
+      background-image: url(skill/adobe-photoshop_icon.png);
+    }
+  }
+}
+// skill end
+
+// -- contact --
+.contact {
+  background: $main_color;
+  text-align: center;
+}
+.contactIcon {
+  @include icon(3.2rem);
+  margin: 10px 15px;
+}
+// contact end
+
+// -- footer --
+.footer {
+  width: 100%;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, .3);
+  color: $w_color;
+  text-align: center;
+}
+// footer end
+
+@media screen and (max-width: 1090px) {
+  .mainTitle {
+    margin-bottom: 40px;
+  }
+  .tab-only {
+    display: block;
+  }
+  // ヘッダー
+  .header {
+    padding: 10px 0;
+    right: 1%;
+  }
+  .nav {
+    &__menu {
+      margin: 20px 0;
+      padding: 5px 10px;
+      border-color: $b_color;
+    }
+  }
+  // ヘッダーここまで
+  // -- skill --
+.skill {
+  &-container {
+    padding: 0 60px;
+    &__img {
+      width: 120px;
+    }
+  }
+}
+// skill end
+}
+
+@media screen and (max-width: 767px) {
+  // 共通
+  .section {
+    width: calc(100% - 20px);
+    padding: 60px 10px;
+  }
+  .mainTitle {
+    font-size: $medium-large;
+  }
+  .subTitle {
+    font-size: $reguler;
+  }
+  .tab-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+// ヘッダー縦
+  .header {
+    width: 60px;
+    padding: 10px 0;
+    top: unset;
+    bottom: 20px;
+  }
+   .nav {
+      &__menu {
+        margin: 10px 0;
+        padding: 5px 10px;
+        border-color: $b_color;
+      }
+      &__link {
+        font-size: $small;
+      }
+    }
+  // ヘッダーここまで
+  
+  // タイトル・キービジュアル
+  .top {
+    &-wrapper {
+      &__title {
+        font-size: $big;
+      }
+      &__subTitle {
+        font-size: $medium;
+      }
+    }
+  }
+  // タイトル・キービジュアルここまで
+  
+  // -- works --
+  .works {
+    &-subtitle {
+      &__annotation {
+        font-size: $small;
+        margin-bottom: 40px;
+      }
+    }
+    &-container {
+      display: block;
+    }
+  }
+  .card {
+      @include card(100%);
+      &__imgArea {
+        height: 200px;
+    }
+  }
+  .card.card1 {
+      @include card(100%);
+    }
+  // works end
+  
+  // -- about --
+  .about {
+    &-title {
+      margin-bottom: 60px;
+    }
+  }
+
+   .info {
+    display: block;
+    padding: 40px 0;
+    &__avatar {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 40px;
+    }
+    &__description {
+      width: calc(100% - 20px * 2);
+      padding: 0 20px;
+      display: block;
+      text-align: center;
+      &-text {
+        margin-bottom: 15px;
+        line-height: 1.2;
+        letter-spacing: 1.2px;
+      }
+      &-menu {
+        margin-bottom: 10px;
+        line-height: 1.2;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+  .infoIcon {
+    @include icon(2rem);
+    text-align: center;
+    &:first-of-type {
+      margin-right: 12px;
+    }
+  }
+  // about end
+    
+  // -- skill --
+  .skill {
+    &-subtitle {
+      margin-bottom: 40px;
+    }
+    &-container {
+      padding: 0;
+      &__img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+  // skill end
+  
+  // -- contact --
+  .contact {
+    &__subtitle {
+      margin-bottom: 40px;
+    }
+  }
+  .contactIcon {
+    @include icon(3.2rem);
+    margin: 10px 15px;
+  }
+// contact end
+
+// -- footer --
+  .footer {
+    padding: 10px 0;
+  }
+// footer end
+}
+
+@media screen and (max-width: 500px) {
+  .sp-only {
+    display: none;
+  }
+}
