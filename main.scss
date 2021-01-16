@@ -5,6 +5,12 @@ html {
   font-size: $small;
 }
 
+// @keyframes load {
+//   0% {
+
+//   }
+// }
+
 body {
   font-family: "Montserrat", "Noto Sans", sans-serif;
 }
@@ -170,7 +176,7 @@ hr {
   &__test {
     width: 100%;
     height: 100vh;
-    animation: eizo 5s linear 0.3s;
+    animation: eizo 5s linear 0s;
     position: absolute;
     top: 0;
     left: 0;
