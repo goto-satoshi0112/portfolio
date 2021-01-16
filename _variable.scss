@@ -16,9 +16,10 @@ $main-color: rgba(255, 200, 0, .4);
 
 // フォントサイズ
 $ex-big: 6rem;
-$big: 4.8rem;
-$medium-large: 3.6rem;
+$big: 3.6rem;
+$medium-large: 2.8rem;
 $medium: 2.4rem;
+$medium-reguler: 2rem;
 $reguler: 1.6rem;
 $little-small: 1.4rem;
 $small: 10px;
@@ -30,8 +31,9 @@ $small: 10px;
 }
 // セクションタイトル
 @mixin mainTitle {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-size: $big;
+  letter-spacing: 4px;
   text-align: center;
 }
 // セクションサブタイトル
@@ -44,21 +46,21 @@ $small: 10px;
 // テキスト
 @mixin text {
   font-size: $reguler;
-  margin-bottom: 25px;
-  line-height: 1.2;
+  margin-bottom: 30px;
+  line-height: 1.5;
   letter-spacing: 1.6px;
 }
 // カード共通
 @mixin card($width) {
   width: $width;
   margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
 @mixin card-text {
   color: $b_color;
   font-size: $reguler;
-  // padding-bottom: 20px;
-  padding: 20px;
+  padding-bottom: 20px;
   line-height: 1.6;
   background: linear-gradient($main-color,$w_color);
 }
@@ -69,6 +71,7 @@ $small: 10px;
   border: 1px solid $b_color;
   box-sizing: border-box;
   overflow-y: scroll;
+
 }
 
 @mixin icon($font-size) {

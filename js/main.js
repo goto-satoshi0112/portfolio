@@ -3,27 +3,29 @@ $(function() {
   var headerHeight = $('.header').height(); //ヘッダーの高さを取得。
   var spHeight = 30; //スマホサイズの余白の高さを取得。
   var pcHeight = 80; //pcサイズの余白の高さを取得。
-  var headerNavMenu = $('.nav__menu'); //ヘッダーコンテンツ
+  var headerNavMenu = $('.middle__nav-menu'); //ヘッダーコンテンツ
 
   if ($(window).width() > 767) {
     $(window).on('load scroll', function() {
       if ($(window).scrollTop() < (topHeight - pcHeight)) {
-      //メインビジュアル内にいるので、クラスを外す。
-      headerNavMenu.removeClass('headerColor-default');
-      } else {
-        //メインビジュアルより下までスクロールしたので、クラスを付けて色を変える
-        headerNavMenu.addClass('headerColor-default');
-      } 
-    });
-  } else {
-    $(window).on('load scroll', function() {
-      if ($(window).scrollTop() < (headerHeight + spHeight)) {
-      //メインビジュアル内にいるので、クラスを外す。
-      headerNavMenu.removeClass('headerColor-default');
-      } else {
-        //メインビジュアルより下までスクロールしたので、クラスを付けて色を変える
-        headerNavMenu.addClass('headerColor-default');
+      //メインビジュアル内にいるので、フェードイン。
+      $('.middle').fadeOut();
+    } else {
+      //メインビジュアルより下までスクロールしたので、フェードアウト
+      $('.middle').fadeIn();
+    } 
+  });
+} else {
+  $(window).on('load scroll', function() {
+    if ($(window).scrollTop() < (headerHeight + spHeight)) {
+      //メインビジュアル内にいるので、フェードイン
+      // headerNavMenu.removeClass('headerColor-default');
+      $('.middle').fadeOut();
+    } else {
+      //メインビジュアルより下までスクロールしたので、フェードアウト
+      $('.middle').fadeIn();
       }
     });
   }
+
 });
