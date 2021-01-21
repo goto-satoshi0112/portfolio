@@ -3,6 +3,7 @@
 // 共通
 html {
   font-size: $small;
+  scroll-behavior: smooth;
 }
 
 // @keyframes load {
@@ -559,30 +560,30 @@ hr {
 
 @keyframes kakudai-title {
   0% {
-    font-size: 9rem;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    font-size: 18rem;
+    // transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
   }
   50% {
     font-size: 9rem;
-    transform: perspective(1000px) rotateX(-180deg) rotateY(-180deg);
+    // transform: perspective(1000px) rotateX(-180deg) rotateY(-180deg);
   }
   100% {
     font-size: $ex-big;
-    transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
+    // transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
   }
 }
 @keyframes kakudai {
   0% {
-    font-size: 4.5rem;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    font-size: 9rem;
+    // transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
   }
   50% {
     font-size: 4.5rem;
-    transform: perspective(1000px) rotateX(-90deg) rotateY(-270deg);
+    // transform: perspective(1000px) rotateX(-90deg) rotateY(-270deg);
   }
   100% {
     font-size: $medium-large;
-    transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
+    // transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
   }
 }
 @keyframes eizo {

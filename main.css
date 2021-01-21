@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -533,31 +534,25 @@ hr {
 
 @keyframes kakudai-title {
   0% {
-    font-size: 9rem;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    font-size: 18rem;
   }
   50% {
     font-size: 9rem;
-    transform: perspective(1000px) rotateX(-180deg) rotateY(-180deg);
   }
   100% {
     font-size: 6rem;
-    transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
   }
 }
 
 @keyframes kakudai {
   0% {
-    font-size: 4.5rem;
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+    font-size: 9rem;
   }
   50% {
     font-size: 4.5rem;
-    transform: perspective(1000px) rotateX(-90deg) rotateY(-270deg);
   }
   100% {
     font-size: 2.8rem;
-    transform: perspective(1000px) rotateX(-360deg) rotateY(-360deg);
   }
 }
 
