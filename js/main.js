@@ -19,7 +19,6 @@ $(function() {
   $(window).on('load scroll', function() {
     if ($(window).scrollTop() < (headerHeight + spHeight)) {
       //メインビジュアル内にいるので、フェードイン
-      // headerNavMenu.removeClass('headerColor-default');
       $('.middle').fadeOut();
     } else {
       //メインビジュアルより下までスクロールしたので、フェードアウト
@@ -27,5 +26,6 @@ $(function() {
       }
     });
   }
+
 
 });
